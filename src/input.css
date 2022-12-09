@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar{
+ width: 7px;
+}
+::-webkit-scrollbar-track{
+ background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+background: rgba(255, 255, 255, 0.25);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.4px);
+-webkit-backdrop-filter: blur(6.4px);
+width: 7px;
+border-radius: 20px;
+}
+
+html {
+ overflow: auto;
+}
+
+body{
+ overflow: hidden;
+ -ms-overflow-style: none;
+ scrollbar-width: 10px;
+ scroll-behavior: smooth ; 
+ scrollbar-gutter : both-edges;
+}
+:is(.Shape){
+  overflow: scroll !important ; 
+}
+@layer{
+ .App{
+  @apply font-Pop
+ }
+ /*the login page design*/
+ .BtnHolder{
+  @apply h-screen flex items-center justify-center
+ }
+ .googleBtn{
+  @apply flex justify-center items-center gap-1 bg-black rounded-2xl text-white font-semibold p-2 !important ; 
+ }
+ .icon{
+  @apply h-8 w-8 ;
+ }
+
+ /*Home Section design*/
+  .Home{
+   @apply h-screen flex justify-center items-center flex-col
+  }
+  .navBar{
+   @apply relative top-2 flex items-center w-[90%] px-2 py-1 h-11 justify-between !important
+  }
+  .hodlerInfoUser{
+    @apply cursor-pointer h-fit w-fit py-2 px-3 bg-File_Bg_Hover rounded-specified
+  }
+  .AppIcon{
+    @apply h-10 w-10
+  }
+  .userIcon{
+   @apply h-8 w-8 rounded-[50%]
+  }
+  .userName{
+   @apply text-base font-semibold !important ; 
+  }
+  .choice-holder{
+   @apply flex gap-4 h-[90%] w-full justify-center items-center
+  }
+  .NewFile-Holder{
+   @apply relative
+  }
+  .addBtn{
+   @apply flex justify-center items-center bg-white rounded-md h-fit w-fit px-1 py-[2px] ; 
+  }
+  .BtnStyle{
+   @apply h-[12rem] w-[12rem] flex justify-center items-center flex-col gap-3 shadow-specified  px-2 rounded-[30px] transition-all hover:bg-File_Bg_Hover text-Font_Color hover:text-black !important
+  }
+ /*The main app design*/
+  .HomeSection{
+   @apply  h-screen flex items-center justify-start 
+  }
+  /* sidebar section */
+  .sideBar {
+   @apply relative overflow-y-hidden h-full basis-[25%] bg-white border-r border-solid border-gray-300 py-4 px-6 !important
+  }
+  .ImageHolder{
+   @apply flex items-center gap-2 bg-[#93A0FF] absolute top-0 left-0 w-full px-4 py-3
+  }
+  .list{
+   @apply relative top-12 -left-2 gap-2 flex justify-center w-full items-start flex-col px-0 !important
+  }
+  .ListItem{
+   @apply flex items-center gap-3 rounded-specified h-fit w-full px-2 py-2 text-lg font-normal  bg-white hover:bg-File_Bg_Hover
+  }
+  /*file Section*/
+  .File_Section{
+   @apply h-full basis-[75%] flex flex-col overflow-y-scroll m-0 p-0 box-border !important
+  }
+  .searchHolder{
+   @apply sticky z-20 top-0 flex items-center py-2 border-b border-solid border-gray-300 flex-col gap-[2em] basis-[20%] bg-white shadow-specified !important
+  }
+  .searchBar{
+   @apply flex items-center h-16 w-[60%] px-3 rounded-specified bg-white shadow-specified !important
+  }
+  .searchInput{
+   @apply outline-none border-none indent-2 py-3 w-full
+  }
+  .projectChoice{
+    @apply flex w-[90%] justify-between items-center !important
+  }
+  .projectBtn{
+    @apply relative bg-white py-3 px-2 rounded-xl w-[10rem] shadow-specified !important ; 
+  }
+  .addBtn{
+   @apply absolute -top-3 -right-3 bg-transparent !important
+  }
+  .fileModification{
+   @apply bg-File_Bg_Hover relative -top-[2%] basis-[80%] w-full p-6 flex items-center justify-center
+  }
+  .FileContainer{
+   @apply h-full w-full px-3
+  }
+  .fileList{
+   @apply flex items-start justify-start gap-2 flex-wrap px-5 pb-2 h-full ; 
+  }
+  .FileDataHolder{
+    @apply flex justify-center items-center flex-col gap-4 ; 
+  }
+  .fileHolder{
+   @apply relative top-3 cursor-pointer rounded-fileRadius flex justify-center items-center h-[8rem] w-[13rem] bg-white shadow-specified
+  }
+  .modificationData{
+   @apply flex justify-center items-center text-[15px] text-Folder_Bg
+  }
+  /*History Section*/
+  .HistoryHolder{
+    @apply basis-[75%] h-full flex justify-start items-center flex-col
+  }
+  .HistoryTitle{
+    @apply font-semibold text-2xl w-[90%] flex justify-start items-center basis-[10%] !important; 
+  }
+  .searchFiles{
+    @apply w-full bg-File_Bg_Hover basis-[90%] px-[5%] py-[2%]
+  }
+  .DataInfoHolder{
+    @apply relative flex flex-col gap-2 items-start justify-start
+  }
+  .BtnChoice{
+    @apply cursor-pointer flex justify-between items-center rounded-specified bg-white h-fit w-[20%] px-4 py-2 
+  }
+  .RBtn{
+    @apply -rotate-90 !important
+  }
+  .TableInfo{
+    @apply w-full h-fit py-2 px-4 flex justify-between items-center bg-white rounded-specified ;
+  }
+  .FilesData{
+    @apply w-full rounded-specified bg-white p-1
+  }
+  .dataFileHolder{
+    @apply py-3 rounded-none border-b border-solid border-gray-300 !important ; 
+  }
+  .ChoiceDropDown{
+    @apply absolute left-[15%]  flex justify-center flex-col gap-2 bg-[#93A0FF] w-[15%] h-fit px-2 py-3 shadow-specified rounded-specified ; 
+  }
+  .TimeChange{
+    @apply hover:bg-white rounded-lg cursor-pointer h-fit w-full px-2 py-1 ; 
+  }
+  /*Studio style*/
+  .StudioContainer{
+    @apply h-screen w-full
+  }
+  .navBarElements{
+    @apply  px-[3%] py-4 w-full flex justify-between items-center bg-navBar_Bg border-b shadow-specified border-solid border-gray-300 !important
+  }
+  .ListItemsHolder{
+    @apply flex items-center gap-3 bg-white px-2 py-1 rounded-md shadow-specified
+  }
+  .RBtn{
+    @apply fill-white cursor-pointer rotate-0 selection:bg-transparent  !important
+  }
+  .rotation{
+    @apply -rotate-45 !important
+  }
+  .ExportBtn{
+    @apply h-fit w-fit px-3 py-2 text-[16px] text-white font-medium rounded-md bg-green-600 !important ; 
+  }
+  .deleteBtn{
+    @apply bg-red-500 !important
+  }
+  .UiContainer{
+    @apply h-full w-full flex items-center !important
+  }
+  .fabricContainer{
+    @apply basis-[80%] bg-gray-300 h-screen !important
+  }
+  .Shape{
+    @apply h-[200vh] w-full overflow-y-scroll !important
+  }
+  .ZoomFunct{
+    @apply absolute top-[12%] right-[21%] h-10 w-fit px-2 flex items-center justify-center gap-3 rounded-specified bg-File_Bg !important ; 
+  }
+  .ZoomFuncCont{
+    @apply cursor-pointer flex justify-center items-center !important
+  }
+  .sideBarModification{
+    @apply basis-[20%] bg-navBar_Bg h-full px-[2%] py-6 overflow-y-scroll 
+  }
+  .holder{
+    @apply w-full 
+  }
+  .TitleHolder{
+    @apply text-white font-semibold text-[16px] !important
+  }
+  .ElementHolder{
+    @apply flex justify-start items-center gap-3 flex-wrap w-full
+  }
+  .Info{
+    @apply flex justify-between py-2 items-center w-[95%] text-white 
+  }
+  .Data{
+    @apply font-light !important
+  }
+  .material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0, 
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 68
+  }
+  .Title404{
+    @apply cursor-pointer h-screen flex justify-center items-center text-9xl font-semibold !important
+  }
+  .svg-spin{
+    @apply animate-spin
+  }
+} 
